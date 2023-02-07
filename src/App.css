@@ -1,4 +1,13 @@
-.App {
+#headerLogo{
+  display: inline;
+  height: 5rem;
+}
+
+
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +44,6 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
+
+
