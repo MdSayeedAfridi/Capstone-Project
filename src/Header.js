@@ -4,7 +4,13 @@ function Header() {
   return (
    <>
    <header>
-   <img id="headerLogo" src="logo2.png" alt="Little Lemon Logo" />
+   <div className="nav-container">
+            <ul>
+            <li>
+                <img src="logo.png" alt="logo" class="nav-logo"/>
+            </li>
+        </ul>
+        </div>
    </header>
    </>
   )

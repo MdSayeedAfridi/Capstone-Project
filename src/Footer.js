@@ -4,8 +4,11 @@ function Footer() {
   return (
     <>
       <footer>
-        @Copyrights reserved 2023.
-      </footer>
+    <div className="footer">
+        <img src="logo_footer.png" alt="logo" class="footer-logo"/>
+        <p>&copy; 2022 Copyrights Little Lemon</p>
+    </div>
+    </footer>
     </>
   )
 }
