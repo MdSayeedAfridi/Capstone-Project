@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const fetchAPI = (date) => {
-  // your implementation to retrieve available times from API
-};
-
-const submitAPI = (formData) => {
-  // your implementation to submit form data to API
-};
-
-const BookingsPage = () => {
+const BookingsPage = (props) => {
   const [times, setTimes] = useState([]);
   const [selectedDate, setSelectedDate] = useState(new Date());
+  const navigate = useNavigate();
 
   const initializeTimes = () => {
     const today = new Date();
@@ -30,12 +24,7 @@ const BookingsPage = () => {
   }, []);
 
   const handleSubmit = (formData) => {
-    const success = submitAPI(formData);
-    if (success) {
-      alert('Booking submitted successfully!');
-    } else {
-      alert('Booking submission failed. Please try again.');
-    }
+    props.submitForm(formData);
   };
 
   return (
@@ -60,4 +49,21 @@ const BookingsPage = () => {
   );
 };
 
-export default BookingsPage;
+const Main2 = () => {
+  const submitForm = (formData) => {
+    const success = submitAPI(formData);
+    if (success) {
+      navigate('/confirmed');
+    } else {
+      alert('Booking submission failed. Please try again.');
+    }
+  };
+
+  return (
+    <div>
+      <BookingsPage submitForm={submitForm} />
+    </div>
+  );
+};
+
+export default Main2;

@@ -5,7 +5,7 @@ import Main from './Main';
 import Nav from './Nav';
 import HomePage from './HomePage';
 import BookingPage from './BookingPage';
-import { Routes, Route, BrowserRouter as Router } from "react-router-dom"
+import { Routes, Route, BrowserRouter as Router} from "react-router-dom"
 
 
 
@@ -16,7 +16,7 @@ function App() {
     <>
         <div className="App">
     <Router>
-        <Routes>
+          <Routes>
             <Route exact path="/" element={<HomePage />} />
             <Route exact path="/booking" element={<BookingPage />} />
           </Routes>

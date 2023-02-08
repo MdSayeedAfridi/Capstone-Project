@@ -5,7 +5,7 @@ function Footer() {
     <>
       <footer>
     <div className="footer">
-        <img src="logo_footer.png" alt="logo" class="footer-logo"/>
+        <img src="logo_footer.png" alt="logo" className="footer-logo"/>
         <p>&copy; 2022 Copyrights Little Lemon</p>
     </div>
     </footer>
@@ -13,4 +13,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default Footer;
